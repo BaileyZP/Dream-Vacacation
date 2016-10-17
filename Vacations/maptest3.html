@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<link rel="stylesheet" type="text/css"
+	 href="Map.css">
+		<style>
+		    <ul id="navbar">
+                  <li class ="navitem"><a href="maplink2.html">All the Places to Go</a></li>
+                  <li class ="navitem"><a  class="active" href="maptest3.html">A More Detail Look at the Places</a></li>
+                  <li class ="navitem"><a href="Maplink4.html">List</a></li>
+             </ul> 
+			<div id="Everyone">
+		</style>
+		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBymJyp3J0ZsgXYPlUE02kPo2HuM4oMJnA"></script>
+		<script>
+		function initialize() {
+		  var mapProp = {
+			center:new google.maps.LatLng(40.758899,-73.987325),
+			zoom:17,
+			mapTypeId:google.maps.MapTypeId.SATELLITE
+		  };
+		  var map=
+		   new google.maps.Map(document.getElementById("googleMap"),mapProp);
+		  
+		  //Parthenon Map (to make a second map, just add more variables for
+		  //               map properties, the map, and a second div in the html)
+		  var parthMapProp = {
+			center:new google.maps.LatLng(51.508742,-0.120850),
+			zoom:17,
+			mapTypeId:google.maps.MapTypeId.SATELLITE
+		  };
+		  //make sure you use the second map properties, not the original one
+		  var parthMap= new google.maps.Map(document.getElementById("parthenonMap"),parthMapProp);
+		  
+		   var paris2 = {
+			center:new google.maps.LatLng(48.8587741,2.2074741),
+			zoom:17,
+			mapTypeId:google.maps.MapTypeId.SATELLITE
+		  };
+		  //make sure you use the second map properties, not the original one
+		  var paris3= new google.maps.Map(document.getElementById("french"),paris2);
+		
+		   var Barclona2 = {
+			center:new google.maps.LatLng(41.3948974,2.0785564),
+			zoom:17,
+			mapTypeId:google.maps.MapTypeId.SATELLITE
+		  };
+		  //make sure you use the second map properties, not the original one
+		  var Barclona3= new google.maps.Map(document.getElementById("Spain"),Barclona2);
+		  
+		  var florence2 = {
+			center:new google.maps.LatLng(43.7800147,11.2058627),
+			zoom:17,
+			mapTypeId:google.maps.MapTypeId.SATELLITE
+		  };
+		  //make sure you use the second map properties, not the original one
+		  var florence3= new google.maps.Map(document.getElementById("Team"),florence2);
+		  
+		  
+		    var athens2 = {
+			center:new google.maps.LatLng(37.9908996,23.7032341),
+			zoom:17,
+			mapTypeId:google.maps.MapTypeId.SATELLITE
+		  };
+		  //make sure you use the second map properties, not the original one
+		  var athens3= new google.maps.Map(document.getElementById("Geam"),athens2);
+		
+		
+		 var NZ2 = {
+			center:new google.maps.LatLng(-36.8493653,174.7578897),
+			zoom:17,
+			mapTypeId:google.maps.MapTypeId.SATELLITE
+		  };
+		  //make sure you use the second map properties, not the original one
+		  var NZ3= new google.maps.Map(document.getElementById("Zeam"),NZ2); 
+		  
+		  
+		  
+		  var Norway2 = {
+			center:new google.maps.LatLng(60.3652338,5.1483192),
+			zoom:17,
+			mapTypeId:google.maps.MapTypeId.SATELLITE
+		  };
+		  //make sure you use the second map properties, not the original one
+		  var Norway3= new google.maps.Map(document.getElementById("Neam"),Norway2);
+		  
+		}
+		google.maps.event.addDomListener(window, 'load', initialize);
+		
+
+		
+		</script>
+	</head>
+
+	<body>
+	
+	 <!-- BEGIN NAVIGATION BAR -->
+            <ul id="navbar">
+                  <li class ="navitem"><a href="maplink2.html">All the Places to Go</a></li>
+                  <li class ="navitem"><a  class="active" href="maptest3.html">A More Detail Look at the Places</a></li>
+                  <li class ="navitem"><a href="Maplink4.html">List</a></li>
+             </ul> 
+			<div id="Everyone">
+     
+        <!-- END NAVIGATION BAR -->
+
+<center>
+		<h1>Awesome Places to Go in Detail!</h1>
+		<p>NYC, New York</p>
+		<div id="googleMap" style="width:1000px;height:1000px;"></div>
+		<p>London,England</p>
+		<!-- The second map div for the parthenon -->
+		<div id="parthenonMap" style="width:1000px;height:1000px;"></div>
+		<p>Paris, France</p>
+		<div id="french" style="width:1000px;height:1000px;"></div>
+		<p>Best Soccer Team(Spain)</p>
+		<div id="Spain" style="width:1000px;height:1000px;"></div>
+		<p>Florence, Italy</p>
+		<div id="Team" style="width:1000px;height:1000px;"></div>
+		<p>Athens, Greece</p>
+		<div id="Geam" style="width:1000px;height:1000px;"></div>
+		<p>Auckland, New Zealand</p>
+		<div id="Zeam" style="width:1000px;height:1000px;"></div>
+		<p>NORWAY!!!</p>
+		<div id="Neam" style="width:1000px;height:1000px;"></div>
+</center>
+	</body>
+
+</html>
