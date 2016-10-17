@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css"
+	 href="Map.css">
+<body>
+ <!-- BEGIN NAVIGATION BAR -->
+             <ul id="navbar">
+                  <li class ="navitem"><a class="active" href="maplink2.html">All the Points to Go</a></li>
+                  <li class ="navitem"><a  href="maptest3.html">A More Detail Look at the Places</a></li>
+                   <li class ="navitem"><a href="Maplink4.html">List</a></li>
+             </ul>
+     
+        <!-- END NAVIGATION BAR -->
+<div id="Everyone">
+
+
+<div id="map" style="width:100%;height:500px"></div>
+<center>
+<h1>All the Points to Go</h1>
+<p> These are the 8 places that I would love to visit</p>
+</center> 
+<script>
+function myMap() {
+  var myCenter = new google.maps.LatLng(51.508742,-0.120850);
+  //myCenter is a Latitude/Longitude object. It stores a point.
+  var mapCanvas = document.getElementById("map");
+  //stores the link to the div that the map will go in
+  var mapOptions = {center: myCenter, zoom:3, mapTypeId:google.maps.MapTypeId.SATELLITE};
+  //stores the options for the map. note, we used
+  //myCenter, the variable storing the point, in
+  //the center option.
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  // creates the map itself. we gave it the variables for
+  // the mapCanvas (where to put it) and mapOptions (what
+  //it ill look like)
+  var marker = new google.maps.Marker({position:myCenter});
+  //creates a new marker at the myCenter location (we used
+  // that myCenter LatLng variable again)
+  marker.setMap(map);
+  //follows object.method(0 notation.
+  //the marker is the object. it's being told to
+  //set its map to the map we created two lines up.
+  //this PUTS the marker on the map.
+  
+  var paris= new google.maps.LatLng(48.8587741,2.2074741);
+  var france= new google.maps.Marker({position:paris});
+    france.setMap(map);
+    
+    var florence= new google.maps.LatLng(43.7800147,11.2058627);
+    var Rome =new google.maps.Marker({position:florence});
+    Rome.setMap(map);
+    
+    var Barclona=new google.maps.LatLng(41.3948974,2.0785564);
+    var Spain=new google.maps.Marker({position:Barclona});
+    Spain.setMap(map);
+    
+    var NYC= new google.maps.LatLng(40.758899,-73.987325);
+    var NY= new google.maps.Marker({position:NYC});
+     NY.setMap(map);
+     
+     var athens= new google.maps.LatLng(37.9908996,23.7032341);
+     var Greece= new google.maps.Marker({position:athens});
+     Greece.setMap(map);
+     
+     var NZ= new google.maps.LatLng(-36.8493653,174.7578897);
+     var ZN= new google.maps.Marker({position:NZ});
+     ZN.setMap(map);
+     
+     var Norway= new google.maps.LatLng(60.3652338,5.1483192);
+     var N= new google.maps.Marker({position:Norway});
+     N.setMap(map);
+     
+     var flightPath=new google.maps.Polyline({
+     path: [NYC, myCenter,paris,Barclona,florence, athens, NZ, Norway,NYC],
+     strokeColor:"blue",
+     strokeOpacity:0.8,
+     strokeWeight: 8
+     });
+     flightPath.setMap(map);
+     
+     
+}  
+  
+
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+
+</body>
+</html>
